@@ -7,7 +7,7 @@ while True:
     # Loop 2 is used for retry when user did not input letters
     while True:
         name = input("Please input your name: ")
-        while not name.isalpha and len(name) > 0():
+        while not len(name) > 0 and name.isalpha():
             print("ERROR! Please enter a valid name.")
             name = input("Please input your name: ")
         
