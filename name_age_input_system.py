@@ -1,24 +1,22 @@
-def is_valid_name(name):
-    # Check if the name contains only letters and is not empty
-    return name.isalpha() and len(name) > 0
-
 user_name_age = []
 
 # Loop 1 is used to ask user for input
 while True:
-    # Loop 2 is used for retry when user did not input a number
+    # Loop 2 is used for retry when user did not input letters
     while True:
-        try:
-            name = input("Please input your full name: ")
+        name = input("Please input your name: ")
+        if name.isalpha():
+            continue
+        elif not name.isalpha():
+            print("ERROR! Please input your name again")
             break
-            
-        except:
-            print("Error")
-            
-    while true:
-        try:
-            age = int(input("Please input your age: "))
-            break 
 
-        except ValueError:
-            print("Error! Please input a number.")
+        # Check if the age is an integer
+        while True:
+            try:
+                age = int(input("Please input your age: "))
+                break 
+
+            except ValueError:
+                print("ERROR! Please input your age again.")
+        
