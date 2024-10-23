@@ -7,10 +7,9 @@ while True:
     while True:
         name = input("Please input your name: ")
         while not name.isalpha():
-            print("ERROR! Please input your name again")
+            print("ERROR! Please enter a valid name.")
             name = input("Please input your name: ")
         
-
         # Check if the age is an integer
         while True:
             try:
