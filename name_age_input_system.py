@@ -1,5 +1,6 @@
 
-user_name_age = []
+names = []
+ages = []
 
 # Loop 1 is used to ask user for input
 while True:
@@ -19,7 +20,10 @@ while True:
             except ValueError:
                 print("ERROR! Please input your age again.")
 
-        name.append(name)
-        name.append(int(age))
+        names.append(name)
+        ages.append(int(age))
 
-        user_name_age[age] 
+        retry = input("Add another person? (Type Yes/No only): ")
+
+
+        
