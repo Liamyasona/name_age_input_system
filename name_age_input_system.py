@@ -23,7 +23,13 @@ while True:
         names.append(name)
         ages.append(int(age))
 
+        # Retry message
         retry = input("Add another person? (Type Yes/No only): ")
+        if any != "yes":
+            break
+
+        elif any != "no":
+            print()
 
 
         
