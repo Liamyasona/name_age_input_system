@@ -12,15 +12,15 @@ while True:
         else:
             break  # Exit this loop if the name is valid
 
-    # Loop for age input
-    while True:
-        try:
-            age = int(input("Please input your age: "))
-            if age < 0:
-                raise ValueError
-            break  # Exit this loop if the age is valid
-        except ValueError:
-            print("ERROR! Please input your age again.")
+        # Loop for age input
+        while True:
+            try:
+                age = int(input("Please input your age: "))
+                if age < 0:
+                    raise ValueError
+                break  # Exit this loop if the age is valid
+            except ValueError:
+                print("ERROR! Please input your age again.")
 
     # Store the data
     names.append(name)
@@ -36,7 +36,7 @@ if ages:
     oldest_index = ages.index(max(ages))  # Find the index of the person with the oldest age
     oldest_name = names[oldest_index]
     oldest_age = ages[oldest_index]
-    print("The oldest person is: ")
+    print("The oldest person on the list is: ")
     print(f"{oldest_name}")
     print(f"{oldest_age}")
 
