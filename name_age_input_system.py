@@ -1,4 +1,4 @@
-
+#List for the entered names and ages
 names = []
 ages = []
 
@@ -20,16 +20,23 @@ while True:
             except ValueError:
                 print("ERROR! Please input your age again.")
 
-        names.append(name)
-        ages.append(int(age))
+            # Store in the masterlist all data
+            names.append(name)
+            ages.append(int(age))
 
         # Retry message
         retry = input("Add another person? (Type Yes/No only): ")
-        if any != "yes":
+        if retry == "Yes":
             break
+    
+    if ages:
+        oldest_index = ages.index(max(ages))  # Find the index of the oldest age
+        oldest_name = names[oldest_index]
+        oldest_age = ages[oldest_index]
 
-        elif any != "no":
-            print()
+    
+
+
 
 
         
