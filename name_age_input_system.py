@@ -9,13 +9,14 @@ while True:
         name = input("Please input your name: ")
         while not len(name) > 0 and name.isalpha():
             print("ERROR! Please enter a valid name.")
-            name = input("Please input your name: ")
+            continue
         
         # Check if the age is an integer
         while True:
             try:
                 age = int(input("Please input your age: "))
-                break 
+                if(age < 0):
+                    raise ValueError
 
             except ValueError:
                 print("ERROR! Please input your age again.")
@@ -26,13 +27,9 @@ while True:
 
         # Retry message
         retry = input("Add another person? (Type Yes/No only): ")
-        if retry == "Yes":
+        while retry == "Yes":
             break
-    
-    if ages:
-        oldest_index = ages.index(max(ages))  # Find the index of the oldest age
-        oldest_name = names[oldest_index]
-        oldest_age = ages[oldest_index]
+
 
     
 
