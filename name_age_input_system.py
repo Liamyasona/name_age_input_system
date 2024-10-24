@@ -4,6 +4,7 @@ ages = []
 
 # Loop 1 to ask user for input
 while True:
+    print("Name-Age Input System")
     # Loop 2 for name input
     while True:
         name = input("Please input your name: ")
@@ -12,22 +13,22 @@ while True:
         else:
             break  # Exit this loop if the name is valid
 
-        # Loop for age input
-        while True:
-            try:
-                age = int(input("Please input your age: "))
-                if age < 0:
-                    raise ValueError
-                break  # Exit this loop if the age is valid
-            except ValueError:
-                print("ERROR! Please input your age again.")
+    # Loop for age input
+    while True:
+        try:
+            age = int(input("Please input your age: "))
+            if age < 0:
+                raise ValueError
+            break  # Exit this loop if the age is valid
+        except ValueError:
+            print("ERROR! Please input your age again.")
 
     # Store the data
     names.append(name)
     ages.append(age)
 
-    # Retry message
-    retry = input("Add another person? (Type yes/no only): ").strip().lower()
+    # After input, retry message if another person will be added on the list
+    retry = input("Add another person on the list? (Type yes/no only): ").strip().lower()
     if retry == "no":
         break  # Break if the user inputs "no"
 
